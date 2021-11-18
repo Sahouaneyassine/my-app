@@ -3,16 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>in.javahome</groupId>
 	<artifactId>myweb</artifactId>
-
 	<packaging>war</packaging>
 	<version>0.0.5</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
-	<properties> 
-         <maven.compiler.source>1.8</maven.compiler.source>
-         <maven.compiler.target>1.8</maven.compiler.target>
-        </properties>
-
 
 	<dependencies>
 		<dependency>
@@ -30,17 +24,5 @@
 	
 
 	</dependencies>
-	<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
 	
 </project>
