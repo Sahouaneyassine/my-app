@@ -1,13 +1,10 @@
-pipeline{
-    agent any
-    triggers {
-      pollSCM '* * * * *'
+node{
+    stage('SCM Checkout'){
+        git 'https://github.com/Sahouaneyassine/my-app'
     }
-    stages{
-        stage("SCM"){
-            steps{
-               echo "job ran.....again and again"
-            }
-        }
-    }
+    
+    stage('Compile package'){
+        sh 'mvn package'
+    }  
+
 }
