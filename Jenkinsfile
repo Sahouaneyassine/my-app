@@ -1,11 +1,24 @@
-node{
-    stage('SCM Checkout'){
-        git 'https://github.com/Sahouaneyassine/my-app'
+pipeline {
+    agent any
+    tools {
+        maven 'Maven 3.3.9'
+        jdk 'jdk8'
     }
-    
-    stage('Compile package'){
-        //def mvHome = tool name: 'maven-3' , type: 'maven'
-        sh "/usr/share/maven/bin/mvn package"
-    }  
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
+            }
+        }
 
+        stage ('Build') {
+            steps {
+                sh 'mvn clean package' 
+            }
+           
+        }
+    }
 }
