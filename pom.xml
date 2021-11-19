@@ -7,10 +7,7 @@
 	<version>0.0.5</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
-<properties>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
-</properties>
+
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
